@@ -92,7 +92,7 @@ public class Player : MonoBehaviour
         GameObject prefab = Resources.Load<GameObject>("Card");
         for (int i = 0; i < maximo; i++)
         {
-            int random = Random.Range(1, Mazo.Count);
+            int random = Random.Range(0, Mazo.Count);
             GameObject aux = Instantiate(prefab, ManoCartas.transform);
 
             aux.GetComponent<CardDisplay>().card = Mazo[random];
