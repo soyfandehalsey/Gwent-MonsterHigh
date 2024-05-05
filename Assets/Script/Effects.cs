@@ -137,7 +137,8 @@ public static class Efectos
     }
     public static void ManoDevolver(params object[] item)
     {
-
+    if(item[0] is Player player)
+        player.Turno = false;
     }
 
     public static void DespejarClima(params object[] item)
@@ -158,6 +159,6 @@ public static class Efectos
     public static void Ganar(params object[] item)
     {
         if (item[0] is Player player)
-            player.RobarCartas(3);
+            player.Turno = false;
     }
 }
